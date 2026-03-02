@@ -3,3 +3,5 @@ numpy
 gdown
 re
 json
+stanza
+sklearn
