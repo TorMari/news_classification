@@ -1,4 +1,4 @@
-# Lab 2 — Lemma/POS baseline (UA)
+# Lab 3 — Lemma/POS baseline (UA)
 
 ## 1. Задача
 

@@ -1,0 +1,25 @@
+{"id":1, "raw_text":"Netflix займає 9% телевізійного бізнесу", "field_type":"AMOUNT", "expected_behavior":"9% - відсотки, а не грошова сума"}
+{"id":2, "raw_text":"Результат поєдинку - 2:1", "field_type":"AMOUNT", "expected_behavior":"2:1 не є сумою, це рахунок"}
+{"id":3, "raw_text":"на тлі зниження температури нижче -20 градусів", "field_type":"AMOUNT", "expected_behavior":"-20 не є грошовою сумою"}
+{"id":4, "raw_text":"надіслати повідомлення на номер 7576", "field_type":"AMOUNT", "expected_behavior":"7576 не є грошовою сумою"}
+{"id":5, "raw_text":"Рахунок матчу 2:0", "field_type":"AMOUNT", "expected_behavior":"2:0 не є сумою"}
+{"id":6, "raw_text":"Температура +10 градусів", "field_type":"AMOUNT", "expected_behavior":"+10 не є грошовою сумою"}
+{"id":7, "raw_text":"своєю постановою № 751 схвалив Бюджетну декларацію", "field_type":"AMOUNT", "expected_behavior":"751 не є грошовою сумою"}
+{"id":8, "raw_text":"відбудуться змагання в 10-ти видах спорту", "field_type":"AMOUNT", "expected_behavior":"10 не вважати грошовою сумою"}
+{"id":9, "raw_text":"У 2026 році EFM відбудеться", "field_type":"DATE", "expected_behavior":"рік без дня і місяця не вважати повною датою"}
+{"id":10, "raw_text":"відповідний указ №120/2026", "field_type":"DATE", "expected_behavior":"2026 не є датою"}
+{"id":11, "raw_text":"святкувати своє 115-річчя", "field_type":"DATE", "expected_behavior":"115-річчя не вважати датою"}
+{"id":12, "raw_text":"Премія книжкових блогерів була заснована у 2024 році", "field_type":"DATE", "expected_behavior":"2024 не вважати повною датою без дня і місяця"}
+{"id":13, "raw_text":"Об 19:00 розпочинається трансляція", "field_type":"DATE", "expected_behavior":"19:00 не є датою, це час"}
+{"id":14, "raw_text":"Фінали спринту 14.28", "field_type":"DATE", "expected_behavior":"14.28 не є датою, це час змагання"}
+{"id":15, "raw_text":"Віталій Мандзин із чотирма колами штрафу став 28-м (+5.23,5)", "field_type":"DATE", "expected_behavior":"5.23 не є датою"}
+{"id":16, "raw_text":"Призначити у цивільній справі № 607/14205/25", "field_type":"DATE", "expected_behavior":"607/14205/25 не вважати датою"}
+{"id":17, "raw_text":"""Культура в режимі очікування"" (2020/2021)", "field_type":"DATE", "expected_behavior":"2020/2021 не вважати датою, це роки"}
+{"id":18, "raw_text":"Про це йдеться в указі №110-2026", "field_type":"SCORE", "expected_behavior":"110-2026 не є рахунком"}
+{"id":19, "raw_text":"Передшоу Нацвідбору-2026 розпочнеться о 18:00", "field_type":"SCORE", "expected_behavior":"18:00 не вважати рахунком, це година"}
+{"id":20, "raw_text":"2 тур - 27-30 вересня 2026 року.", "field_type":"SCORE", "expected_behavior":"27-30 не вважати рахунком"}
+{"id":21, "raw_text":"у більшості зон світло є 3-4 години", "field_type":"SCORE", "expected_behavior":"3-4 не є рахунком, це проміжок часу"}
+{"id":22, "raw_text":"який передбачає досягнення 70-90% технологічної незалежності", "field_type":"SCORE", "expected_behavior":"70-90 не вважати рахунком, це відсотки"}
+{"id":23, "raw_text":"135 матчів - Кирило Фесенко (2007-2012)", "field_type":"SCORE", "expected_behavior":"2007-2012 не є рахунком, це проміжок часу"}
+{"id":24, "raw_text":"в окремих складних випадках - лише 2-3 години", "field_type":"SCORE", "expected_behavior":"2-3 не є рахунком, це години"}
+
