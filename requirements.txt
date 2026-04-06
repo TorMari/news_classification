@@ -5,3 +5,4 @@ re
 json
 stanza
 sklearn
+gensim
