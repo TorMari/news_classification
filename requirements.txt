@@ -6,3 +6,4 @@ json
 stanza
 sklearn
 gensim
+nltk
