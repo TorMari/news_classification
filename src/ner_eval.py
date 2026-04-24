@@ -14,7 +14,6 @@ def is_match(pred, gold):
         gold_text in pred_text
     )
 
-
 def evaluate(results):
     stats = defaultdict(lambda: {"correct": 0, "missed": 0, "fp": 0})
     
@@ -66,12 +65,10 @@ hybrid_stats = evaluate(results_hybrid)
 
 baseline_metrics = compute_metrics(baseline_stats)
 hybrid_metrics = compute_metrics(hybrid_stats)
-
 df_baseline = pd.DataFrame(baseline_metrics).T
 df_hybrid = pd.DataFrame(hybrid_metrics).T
 
 print("=== BASELINE ===")
 print(df_baseline)
-
 print("\n=== HYBRID ===")
 print(df_hybrid)

@@ -15,7 +15,6 @@ def run_ner_stanza(text):
     return entities
 
 results_baseline = []
-
 for item in evaluation_set:
     predicted = run_ner_stanza(item["text"])
     
