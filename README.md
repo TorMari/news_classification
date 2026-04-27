@@ -18,3 +18,5 @@ LAB 8 link: https://github.com/TorMari/news_classification/tree/lab-08
 LAB 9 link: https://github.com/TorMari/news_classification/tree/lab-09
 
 LAB 10 link: https://github.com/TorMari/news_classification/tree/lab-10
+
+LAB 11 link: https://github.com/TorMari/news_classification/tree/lab-11
