@@ -21,4 +21,6 @@ LAB 10 link: https://github.com/TorMari/news_classification/tree/lab-10
 
 LAB 11 link: https://github.com/TorMari/news_classification/tree/lab-11
 
+LAB 12 link: https://github.com/TorMari/news_classification/tree/lab-12
+
 LAB 13 link: https://github.com/TorMari/news_classification/tree/lab-13
