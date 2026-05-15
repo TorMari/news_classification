@@ -3,7 +3,7 @@ numpy
 gdown
 re
 json
-stanza
-sklearn
-gensim
-nltk
+ast
+transformers 
+torch 
+accelerate

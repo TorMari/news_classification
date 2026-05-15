@@ -1,0 +1,470 @@
+[
+  {
+    "timestamp": "2026-05-14T06:49:41",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "НАТО",
+        "альянс",
+        "оборона",
+        "саміт",
+        "Брюссель"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T06:49:41",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "НАТО",
+        "альянс",
+        "оборона",
+        "саміт",
+        "Брюссель"
+      ],
+      "top_docs": [
+        "Лідери НАТО зібралися на саміт у Брюсселі",
+        "Питання колективної оборони обговорено на зустрічі альянсу"
+      ]
+    },
+    "output": {
+      "classification": "politics"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T06:56:49",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "та",
+        "що",
+        "сказав",
+        "це",
+        "року",
+        "воно",
+        "їх",
+        "було"
+      ]
+    },
+    "output": {
+      "is_noise": true,
+      "noise_words": [
+        "та",
+        "що",
+        "сказав",
+        "це",
+        "року",
+        "воно",
+        "їх",
+        "було"
+      ]
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T06:56:49",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [],
+      "top_docs": [
+        "компания x-corp",
+        "украина"
+      ]
+    },
+    "output": {
+      "classification": "unknown"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:01:03",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "qwe12",
+        "xyz_4",
+        "10101",
+        "err_log",
+        "як"
+      ]
+    },
+    "output": {
+      "is_noise": true,
+      "noise_words": [
+        "як"
+      ]
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:01:03",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "err_log",
+        "як"
+      ],
+      "top_docs": [
+        "Системне повідомлення qwe12",
+        "Лог помилок 10101"
+      ]
+    },
+    "output": {
+      "classification": "unknown"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:01:03",
+    "tool_name": "score_topic_quality",
+    "input": {
+      "top_words": [
+        "err_log",
+        "як"
+      ],
+      "top_docs": [
+        "Системне повідомлення qwe12",
+        "Лог помилок 10101"
+      ]
+    },
+    "output": {
+      "quality": "bad"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Quality score is None."
+  },
+  {
+    "timestamp": "2026-05-14T07:05:27",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "футбол",
+        "чемпіонат",
+        "гол",
+        "стадіон",
+        "ФІФА"
+      ],
+      "top_docs": [
+        "Фінал чемпіонату світу",
+        "Забитий гол на стадіоні"
+      ]
+    },
+    "output": {
+      "classification": "sports"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:05:27",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "футбол",
+        "чемпіонат",
+        "гол",
+        "стадіон",
+        "ФІФА"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:05:27",
+    "tool_name": "score_topic_quality",
+    "input": {
+      "top_words": [
+        "футбол",
+        "гол",
+        "стадіон",
+        "ФІФА"
+      ],
+      "top_docs": [
+        "Фінал чемпіонату світу",
+        "Забитий гол на стадіоні"
+      ]
+    },
+    "output": {
+      "quality": "good"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Quality score is None."
+  },
+  {
+    "timestamp": "2026-05-14T07:09:43",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "ядро",
+        "процесор",
+        "клітина",
+        "біологія",
+        "Intel",
+        "синтез"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:09:43",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "intel",
+        "synthesis"
+      ],
+      "top_docs": [
+        "new intel processor has 16 cores",
+        "integrated circuit contains genetic code"
+      ]
+    },
+    "output": {
+      "classification": "technology"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:09:43",
+    "tool_name": "score_topic_quality",
+    "input": {
+      "top_words": [
+        "intel",
+        "synthesis"
+      ],
+      "top_docs": [
+        "new intel processor has 16 cores",
+        "integrated circuit contains genetic code"
+      ]
+    },
+    "output": {
+      "quality": "good"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Quality score is None."
+  },
+  {
+    "timestamp": "2026-05-14T07:14:00",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "гривня",
+        "НБУ",
+        "інфляція",
+        "курс",
+        "долар"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:18:14",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "вакцина",
+        "щеплення",
+        "вірус",
+        "пандемія",
+        "МОЗ"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:18:14",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "вакцина",
+        "пандемія",
+        "МОЗ"
+      ],
+      "top_docs": [
+        "Нова партія вакцини прибула",
+        "Рецепт смачного борщу з пампушками"
+      ]
+    },
+    "output": {
+      "classification": "politics/health"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:18:14",
+    "tool_name": "score_topic_quality",
+    "input": {
+      "top_words": [
+        "вакцина",
+        "пандемія",
+        "МОЗ"
+      ],
+      "top_docs": [
+        "Нова партія вакцини прибула",
+        "Рецепт смачного борщу з пампушками"
+      ]
+    },
+    "output": {
+      "quality": "mixed"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Quality score is None."
+  },
+  {
+    "timestamp": "2026-05-14T07:22:35",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "Марс",
+        "NASA",
+        "висадка",
+        "космос",
+        "запуск"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:22:35",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "NASA",
+        "запуск"
+      ],
+      "top_docs": [
+        "NASA запускає найбільше дослідження центру Чумацького Шляху",
+        "Перший крок до висадки людини на Місяць"
+      ]
+    },
+    "output": {
+      "classification": "science/gardening"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:26:41",
+    "tool_name": "suggest_topic_label",
+    "input": {
+      "top_words": [
+        "Apple",
+        "смартфон",
+        "iPhone",
+        "iOS",
+        "садівництво"
+      ],
+      "top_docs": [
+        "Як виростити яблука в саду",
+        "Обрізка дерев восени"
+      ]
+    },
+    "output": {
+      "classification": "gardening"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Task completed."
+  },
+  {
+    "timestamp": "2026-05-14T07:26:41",
+    "tool_name": "detect_noise_words",
+    "input": {
+      "top_words": [
+        "Apple",
+        "смартфон",
+        "iPhone",
+        "iOS",
+        "садівництво"
+      ]
+    },
+    "output": {
+      "is_noise": false,
+      "noise_words": []
+    },
+    "success": true,
+    "error": null,
+    "reason": "Found 0 noise words."
+  },
+  {
+    "timestamp": "2026-05-14T07:26:41",
+    "tool_name": "score_topic_quality",
+    "input": {
+      "top_words": [
+        "Apple",
+        "смартфон",
+        "iPhone",
+        "iOS",
+        "садівництво"
+      ],
+      "top_docs": [
+        "Як виростити яблука в саду",
+        "Обрізка дерев восени"
+      ]
+    },
+    "output": {
+      "quality": "good"
+    },
+    "success": true,
+    "error": null,
+    "reason": "Quality score is None."
+  }
+]

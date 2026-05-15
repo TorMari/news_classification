@@ -1,62 +1,72 @@
-test_examples = [
+test_cases = [
   {
-    "case_id": "case_001",
-    "description": "Простий кейс (Happy Path)",
-    "input": "Компанія Apple інвестувала 2 мільярди доларів у розвиток штучного інтелекту 15 травня 2024 року в США.",
-    "expected_behavior": "Extract all fields correctly: Apple, investment, 2000000000, USD, 2024-05-15, USA. No repair needed."
+    "case_id": "case_001", 
+    "case_type": "simple_case", 
+    "top_words": ["НАТО", "альянс", "оборона", "саміт", "Брюссель"], 
+    "top_docs": ["Лідери НАТО зібралися на саміт у Брюсселі", "Питання колективної оборони обговорено на зустрічі альянсу"], 
+    "expected": {"classification": "politics", "quality": "good", "is_noise": False, "noise_words": []}
   },
   {
-    "case_id": "case_002",
-    "description": "Missing required field",
-    "input": "Стало відомо про інвестицію у розмірі 100 млн євро, яку виділили для стартапу минулого тижня.",
-    "expected_behavior": "Validator should flag missing 'company' and 'location'; trigger repair or fail."
+    "case_id": "case_002", 
+    "case_type": "missing_data", 
+    "top_words": [], 
+    "top_docs": ["Ціни на нафту зросли на 5%", "Барель марки Brent торгується за новою ціною"], 
+    "expected": {"classification": "economy", "quality": "mixed/bad", "is_noise": False, "noise_words": []}
   },
   {
-    "case_id": "case_003",
-    "description": "Ambiguous entity",
-    "input": "Amazon купує частину бізнесу своєї дочірньої компанії Amazon Robotics.",
-    "expected_behavior": "Extract main company 'Amazon' (mentioned first) and event 'acquisition'; handle naming ambiguity."
+    "case_id": "case_003", 
+    "case_type": "noisy_text", 
+    "top_words": ["та", "що", "сказав", "це", "року", "воно", "їх", "було"], 
+    "top_docs": ["Компанія X-Corp (колишня Twitter) уклала угоду з приватною фірмою в ОАЕ", "В Україні торік зареєстрували 267 видавців і книгарень"], 
+    "expected": {"classification": "economy/culture", "quality": "bad", "is_noise": True, "noise_words": ["та", "що", "сказав", "це", "року", "воно", "їх", "було"]}
   },
   {
-    "case_id": "case_004",
-    "description": "Relative date",
-    "input": "Вчора корпорація Microsoft підписала партнерську угоду на суму 300 млн доларів.",
-    "expected_behavior": "Normalize 'Вчора' to a specific YYYY-MM-DD date based on current metadata."
+    "case_id": "case_004", 
+    "case_type": "empty_tool_result", 
+    "top_words": ["qwe12", "xyz_4", "10101", "err_log", "як"], 
+    "top_docs": ["Системне повідомлення qwe12", "Лог помилок 10101"], 
+    "expected": {"classification": "-", "quality": "bad", "is_noise": True, "noise_words": ["як"]}
   },
   {
-    "case_id": "case_005",
-    "description": "Potential Hallucination",
-    "input": "Tesla оголосила про запуск нового заводу в Німеччині. Аналітики вважають, що це коштуватиме мільярди.",
-    "expected_behavior": "Amount should be 'null' because 'мільярди' is a vague estimate, not a specific number. Prevent model from inventing a digit."
+    "case_id": "case_005", 
+    "case_type": "no_redundant_tools", 
+    "top_words": ["футбол", "чемпіонат", "гол", "стадіон", "ФІФА"], 
+    "top_docs": ["Фінал чемпіонату світу", "Забитий гол на стадіоні"], 
+    "expected": {"classification": "sports", "quality": "good", "is_noise": False, "noise_words": []}
   },
   {
-    "case_id": "case_006",
-    "description": "Noisy text / Typos",
-    "input": "Googlr інвестує 500млн $ у Францію (Париж).",
-    "expected_behavior": "Fix typo 'Googlr' -> 'Google'; extract '500000000', 'USD', 'France'."
+    "case_id": "case_006", 
+    "case_type": "ambiguity", 
+    "top_words": ["ядро", "процесор", "клітина", "біологія", "Intel", "синтез"], 
+    "top_docs": ["Новий процесор Intel має 16 ядер", "Ядро клітини містить генетичний код"], 
+    "expected": {"classification": "technology/biology/science", "quality": "mixed", "is_noise": False, "noise_words": []}
   },
   {
-    "case_id": "case_007",
-    "description": "Fallback scenario",
-    "input": "У новому звіті йдеться про велику угоду в агросекторі між двома фермерськими господарствами.",
-    "expected_behavior": "Extractor fails to find specific names/amounts; system returns empty schema or marks as 'other' for fallback processing."
+    "case_id": "case_007", 
+    "case_type": "sequential_tools", 
+    "top_words": ["гривня", "НБУ", "інфляція", "курс", "долар"], 
+    "top_docs": ["НБУ встановив офіційний курс", "Інфляція в Україні сповільнилася"], 
+    "expected": {"classification": "economy", "quality": "good", "is_noise": False, "noise_words": []}
   },
   {
-    "case_id": "case_008",
-    "description": "Reviewer rejection",
-    "input": "Акції Apple зросли на 5.5% після презентації в Купертіно.",
-    "expected_behavior": "Reviewer/Validator should reject this as 'investment' because stock price change is not a corporate investment event."
+    "case_id": "case_008", 
+    "case_type": "validator_issue", 
+    "top_words": ["вакцина", "щеплення", "вірус", "пандемія", "МОЗ"], 
+    "top_docs": ["Нова партія вакцини прибула", "Рецепт смачного борщу з пампушками"], 
+    "expected": {"classification": "health", "quality": "mixed", "is_noise": False, "noise_words": []} 
   },
   {
-    "case_id": "case_009",
-    "description": "Repair loop helps",
-    "input": "Meta виділяє 1 мільярд євро на безпеку.",
-    "expected_behavior": "Initial output might miss 'location'. Repair prompt asks for location; model finds context or sets to null/location from metadata."
+    "case_id": "case_009", 
+    "case_type": "reference_to_output", 
+    "top_words": ["Марс", "NASA", "висадка", "космос", "запуск"],
+    "top_docs": ["NASA запускає найбільше дослідження центру Чумацького Шляху", "Перший крок до висадки людини на Місяць"], 
+    "expected": {"classification": "science", "quality": "good", "is_noise": False, "noise_words": []} 
   },
   {
-    "case_id": "case_010",
-    "description": "Repair fails / Manual review",
-    "input": "Компанія X-Corp (колишня Twitter) уклала угоду з приватною фірмою в ОАЕ.",
-    "expected_behavior": "Model confuses X-Corp with SpaceX or fails to extract amount. After 2 repair attempts, flag for manual review."
+    "case_id": "case_010", 
+    "case_type": "agent_error_correction", 
+    "top_words": ["Apple", "смартфон", "iPhone", "iOS", "садівництво"], 
+    "top_docs": ["Як виростити яблука в саду", "Обрізка дерев восени"], 
+    "expected": {"classification": "technology/gardening", "quality": "mixed", "is_noise": False, "noise_words": []} 
   }
 ]
